@@ -1,0 +1,21 @@
+name: CI Pipeline
+on: 
+  push:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '0 */2 * * *'  # at minute 0, every 2nd hour
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "Hello World!"
+      - name: unit-test
+        run: sleep 10
+      - name: test
+        run: echo "Hello World!"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "Hello World!"
